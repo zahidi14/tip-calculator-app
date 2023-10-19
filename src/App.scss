@@ -1,0 +1,199 @@
+// ## Colors
+
+// ### Primary
+
+$Strongcyan: hsl(172, 67%, 45%);
+
+// ### Neutral
+
+$Verydarkcyan: hsl(183, 100%, 15%);
+$Darkgrayishcyan: hsl(186, 14%, 43%);
+$Grayishcyan: hsl(184, 14%, 56%);
+$Lightgrayishcyan: hsl(185, 41%, 84%);
+$Verylightgrayishcyan: hsl(189, 41%, 97%);
+$White: hsl(0, 0%, 100%);
+
+// ## Typography
+
+// ### Body Copy
+
+// - Font size (form inputs): 24px
+
+// ### Font
+
+// - Family: [Space Mono](https://fonts.google.com/specimen/Space+Mono)
+// - Weights: 700
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Space+Mono:wght@700&display=swap");
+* {
+  font-family: "Righteous", sans-serif;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+.body {
+  background-color: $Lightgrayishcyan;
+  width: 100%;
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  .headTitle {
+    width: 10%;
+    height: auto;
+    line-height: 2em;
+    text-align: center;
+    word-wrap: break-word;
+    h1 {
+      text-transform: uppercase;
+      color: $Verydarkcyan;
+      margin-top: 20px;
+    }
+  }
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  background-color: $White;
+  padding: 30px;
+  .right {
+    border-radius: 15px;
+    background-color: $Verydarkcyan;
+  }
+  .left {
+    color: $Darkgrayishcyan;
+    font-size: 18px;
+    input {
+      color: $Verydarkcyan;
+      background-color: $Verylightgrayishcyan;
+      padding: 0; /* Adjust as needed */
+      text-align: right; /* Align text to the right for numeric input */
+      width: 100%;
+      height: 40px;
+      border-radius: 5px;
+
+      &::placeholder {
+        font-size: 18px;
+        text-align: center;
+      }
+      &:focus {
+        border: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .left {
+      width: 100%;
+      padding: 20px;
+      .buttonCont {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 3 columns */
+        grid-gap: 5px;
+      }
+    }
+    .right {
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      font-size: 18px;
+      .result {
+        display: flex;
+
+        justify-content: space-between;
+        align-items: center;
+        .title {
+          .top {
+            color: $Verylightgrayishcyan;
+            font-size: 18px;
+          }
+          .bottom {
+            color: $Grayishcyan;
+            font-size: 18px;
+          }
+        }
+        .number {
+          font-size: 48px;
+          font-weight: 700;
+          color: $Strongcyan;
+        }
+      }
+    }
+
+    button {
+      width: 100%;
+      margin-top: 170px;
+      background-color: $Strongcyan;
+    }
+  }
+}
+
+@media only screen and (min-width: 376px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .left {
+      width: 50%;
+      padding: 20px;
+      .head {
+        margin-top: 30px;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      .buttonCont {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        grid-gap: 5px;
+      }
+    }
+    .right {
+      width: 50%;
+      padding: 20px;
+      margin: 0;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      font-size: 18px;
+      .result {
+        display: flex;
+
+        justify-content: space-between;
+        align-items: center;
+        .title {
+          .top {
+            color: $Verylightgrayishcyan;
+            font-size: 18px;
+          }
+          .bottom {
+            color: $Grayishcyan;
+            font-size: 18px;
+          }
+        }
+        .number {
+          font-size: 48px;
+          font-weight: 700;
+          color: $Strongcyan;
+        }
+      }
+
+      button {
+        width: 100%;
+        margin-top: 170px;
+        background-color: $Strongcyan;
+      }
+    }
+  }
+}

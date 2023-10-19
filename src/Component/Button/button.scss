@@ -1,0 +1,22 @@
+@import "../../App.scss";
+.butt {
+  button {
+    width: 100%;
+    border-radius: 5px;
+    color: $Verylightgrayishcyan;
+    font-weight: 400;
+    height: 40px;
+    margin: 0;
+    background-color: $Verydarkcyan;
+    font-size: 18px;
+    &:hover {
+      color: $Verydarkcyan;
+      background-color: $Lightgrayishcyan;
+      cursor: pointer;
+    }
+    &:active {
+      color: $Verydarkcyan;
+      background-color: $Strongcyan;
+    }
+  }
+}

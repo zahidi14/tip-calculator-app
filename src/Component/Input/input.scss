@@ -1,0 +1,27 @@
+@import "../../App.scss";
+
+.input {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  background-color: $Verylightgrayishcyan;
+  padding: 0 10px;
+  font-size: 24px;
+  input {
+    font-size: 24px;
+    border: 0;
+    color: $Verydarkcyan;
+    background-color: $Verylightgrayishcyan;
+    padding-left: 30px; /* Adjust as needed */
+    text-align: right; /* Align text to the right for numeric input */
+    width: 100%;
+
+    &:focus {
+      border: 1px solid $Strongcyan;
+    }
+  }
+  label {
+    position: relative;
+  }
+}
